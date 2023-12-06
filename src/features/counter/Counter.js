@@ -9,7 +9,9 @@ import { useState } from "react";
 
 const Counter1 = () => {
     const count = useSelector((state) => state.counter.count);
+    //gets rerendered automatically 
     const dispatch = useDispatch();
+    //used to access functions in the redux store 
 
     const [incrementAmount, setIncrementAmount] = useState(0);
 
