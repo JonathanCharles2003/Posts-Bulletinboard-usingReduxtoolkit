@@ -1,8 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from '../features/counter/counterSlice';
-//reducers change the state to a new state 
+import postsReducer from '../features/posts/postsSlice';
+import usersReducer from '../features/users/usersSlice';
+
+
 export const store = configureStore({
     reducer: {
-        counter: counterReducer,
+        posts: postsReducer,
+        users: usersReducer
     }
 })
+//actions handled by usersReducer will update the 'users' slice of the state. 
